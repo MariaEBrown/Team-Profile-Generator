@@ -19,6 +19,7 @@
   "homepage": "https://github.com/MariaEBrown/Team-Profile-Generator#readme",
   "dependencies": {
     "inquirer": "^8.2.4",
-    "jest": "^28.1.0"
+    "jest": "^28.1.0",
+    "jQuery": "^1.7.4"
   }
 }
