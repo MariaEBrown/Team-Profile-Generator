@@ -1,34 +1,24 @@
-//import in what you want to test
 const Employee = require('../lib/Employee');
+const employee = new Employee('mark', '265374', 'markasth@gmail.com');
 
-//diff ways to wrap this together-check out Jest documentation on web
-// call back function
-test('When I call the Employee class, it will create an instance object', () => {
-    // inside  the call back funtion  is the test I want to run
-    // AAA line can be blur together
-    //Arrange put together pieces that your need
-    //Act the actual test method itself
-    const instanceObject = new Employee();
-    //Assert I expect some value to be something else
-    expect(typeof instanceObject).toBe('object');
+test('test if we can get the constructor values for the employee object', () => {
+    expect(employee.name).toBe('mark');
+    expect(employee.id).toBe('265374');
+    expect(employee.email).toBe('markasth@gmail.com');
 });
 
-
-//when I call the getName () {} I should see my name
-
-test('When I call the getName method, I should see the employees name', () => {
-    //AAA
-    //Arrange
-    const name = 'Charlie';
-    const newObj = new Employee(name);
-    //Act
-    const newName = newObj.getName();
-    //Assert
-    expect(newName).toBe(name);
-    //next go to employee.js file in getName () {} method add return this.name; and run the test again
-    
-
-
+test('test if we can get the name from the getName() method', () => {
+    expect(employee.getName()).toBe('mark');
 });
 
+test('test if we can get the id from the getId() method', () => {
+    expect(employee.getId()).toBe('265374');
+});
 
+test('test if we can get the email from the getEmail() method', () => {
+    expect(employee.getEmail()).toBe('markasth@gmail.com');
+});
+
+test('test if we can get the role from the getRole() method', () => {
+    expect(employee.getRole()).toBe('Employee');
+});
